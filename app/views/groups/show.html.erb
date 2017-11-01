@@ -1,0 +1,7 @@
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <%= user.name %> (<%= link_to "Review Partner", new_group_response_path(group_id: params[:id], receiver_id: user.id) %>)
+    </li>
+  <% end %>
+</ul>
